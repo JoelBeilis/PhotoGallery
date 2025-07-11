@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Photo Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Gallery</h1>
+    <p><a href="https://instagram.com/yourhandle" target="_blank">Follow me on Instagram</a></p>
+  </header>
+
+  <section id="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="bw">B&W</button>
+    <button class="filter-btn" data-filter="street">Street</button>
+    <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+  </section>
+
+  <main class="gallery" id="gallery"></main>
+
+  <div id="lightbox" class="hidden">
+    <span id="close">&times;</span>
+    <img id="lightbox-img" />
+    <div id="lightbox-meta">
+      <p><strong>Camera:</strong> <span id="meta-camera"></span></p>
+      <p><strong>Shutter:</strong> <span id="meta-shutter"></span></p>
+      <p><strong>Aperture:</strong> <span id="meta-aperture"></span></p>
+      <p><strong>ISO:</strong> <span id="meta-iso"></span></p>
+    </div>
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
