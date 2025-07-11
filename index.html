@@ -3,37 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Photo Gallery</title>
+  <title>Photography Galleries</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Welcome to My Gallery</h1>
-    <p><a href="https://instagram.com/yourhandle" target="_blank">Follow me on Instagram</a></p>
+    <h1>Galleries</h1>
   </header>
 
-  <section id="filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="nature">Nature</button>
-    <button class="filter-btn" data-filter="bw">B&W</button>
-    <button class="filter-btn" data-filter="street">Street</button>
-    <button class="filter-btn" data-filter="wildlife">Wildlife</button>
-  </section>
+  <main>
+    <section class="gallery-grid">
+      <a href="Albums/landscapes.html" class="gallery-item">
+        <img src="img/placeholder1.jpg" alt="Landscapes" />
+        <div class="overlay">Landscapes</div>
+      </a>
+      <a href="Albums/astro.html" class="gallery-item">
+        <img src="img/placeholder2.jpg" alt="Astrophotography" />
+        <div class="overlay">Astrophotography</div>
+      </a>
+      <a href="Albums/B&W.html" class="gallery-item">
+        <img src="img/placeholder3.jpg" alt="Black & White" />
+        <div class="overlay">Black & White</div>
+      </a>
+      <a href="Albums/street.html" class="gallery-item">
+        <img src="img/placeholder4.jpg" alt="Street" />
+        <div class="overlay">Street</div>
+      </a>
+      <a href="Albums/people.html" class="gallery-item">
+        <img src="img/placeholder5.jpg" alt="People" />
+        <div class="overlay">People</div>
+      </a>
+      <a href="Albums/wildlife.html" class="gallery-item">
+        <img src="img/placeholder6.jpg" alt="Wildlife" />
+        <div class="overlay">Wildlife</div>
+      </a>
+    </section>
+  </main>
 
-  <main class="gallery" id="gallery"></main>
-
-  <div id="lightbox" class="hidden">
-    <span id="close">&times;</span>
-    <img id="lightbox-img" />
-    <div id="lightbox-meta">
-      <p><strong>Camera:</strong> <span id="meta-camera"></span></p>
-      <p><strong>Shutter:</strong> <span id="meta-shutter"></span></p>
-      <p><strong>Aperture:</strong> <span id="meta-aperture"></span></p>
-      <p><strong>ISO:</strong> <span id="meta-iso"></span></p>
-    </div>
-    <button id="prev">&#10094;</button>
-    <button id="next">&#10095;</button>
-  </div>
+  <footer>
+    <p>&copy; 2025 Joel Beilis</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
