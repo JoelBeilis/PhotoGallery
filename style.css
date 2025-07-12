@@ -2,27 +2,94 @@ body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  color: #111;
+  background-color: #111;
+  color: #f0f0f0;
 }
 
-header {
-  text-align: center;
-  padding: 2rem 0;
+.site-header {
+  background-color: #222;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+.site-title {
+  color: #f0f0f0;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.instagram-link .icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: #f0f0f0;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  padding: 0 1rem 2rem;
+  padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.gallery-item {
-  text-decoration: none;
-  color: inherit;
 }
 
 .gallery-thumb {
@@ -39,6 +106,7 @@ header {
   object-fit: cover;
   transition: transform 0.4s ease;
   display: block;
+  border-radius: 8px;
 }
 
 .overlay {
@@ -46,13 +114,14 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 1rem;
   text-align: center;
   font-size: 1.25rem;
   opacity: 0;
   transition: opacity 0.3s ease;
+  border-radius: 0 0 8px 8px;
 }
 
 .gallery-thumb:hover img {
@@ -66,7 +135,7 @@ header {
 footer {
   text-align: center;
   padding: 2rem;
-  background: #f5f5f5;
+  background: #222;
   font-size: 0.9rem;
-  color: #555;
+  color: #aaa;
 }
